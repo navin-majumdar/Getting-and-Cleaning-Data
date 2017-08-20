@@ -43,7 +43,7 @@ colnames(finalsubdata) <- gsub("[()-]","",colnames(finalsubdata))
 averages <- finalsubdata %>% group_by(subject, activity) %>% summarize_all(mean)
 
 # Save the resulting dataset
-write.table(averages, file="./tidy_data.txt")
+write.table(averages, file = "./tidy_data.txt", row.names = FALSE)
 
 # Output final dataset
 averages
