@@ -8,6 +8,7 @@ This dataset should be downloaded and extracted directly into the working direct
 It is assumed that the R script run_analysis.R will be kept in the same working directory (./UCI HAR Dataset).
 
 Once executed, the resulting final tidy dataset will be found at ./tidy_data.txt
+To read a tidy data set stored in tidy_Data.txt into R use read.table(path_to_file, header = TRUE)
 
 Required R Packages:
 1. data.table
@@ -16,15 +17,18 @@ Required R Packages:
 ### run_analysis.R
 This is the main script that is called to performed the cleaning and tidying of the dataset as described in the excercise and listed below.
 
-* Load the various files which make-up the UCI dataset.
-* Merges the training and the test sets to create one data set.
-* Extracts only the measurements on the mean and standard deviation for each measurement.
-* Uses descriptive activity names to name the activities in the data set.
-* Appropriately labels the data set with descriptive variable names.
-* Creates a smaller second dataset, containing only mean and std variables.
+* Read the data of train
+* Read the data of test
+* Read the features info
+* Read the activity labels
+* Assign column names for the train tables
+* Assign column names for the test tables
+* Assign column names for activity labels table
+* Extract only the measurements on the mean and standard deviation for each measurement, including reading column names and subseting the measurements of mean and std from mergedData
+* Use descriptive activity names to name the activities in the data set
 * Cleans-up existing Column Names to give meaningful Column Names
-* Computes the means of this secondary dataset, group by subject/activity.
-* Saves this last tidy dataset to ./data/tidy_data.txt
+* Create a second, independent tidy data set with the average of each variable for each activity and each subject
+* Save a tidy dataset in txt file format 
 
 For futher details, refer to CookBook.md
 
