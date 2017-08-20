@@ -1,11 +1,10 @@
-Codebook explaining the different variables used and any transformations applied in scripts for data cleaning project.
-
-run_analysis.R
+Codebook explaining the different variables used and any transformations applied in the "run_analysis.R" script for data cleaning project.
 
 Input Data
-The script assumes the UCI dataset is extracted directly into ./UCI HAR Dataset/. See the README.md for further details.
+The script assumes the UCI dataset is extracted directly into ./UCI HAR Dataset/. 
+See the README.md for further details.
 
-variables
+Variables
 
 test_subject : contains subject numbers for test observations
 test_x : test data
